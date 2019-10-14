@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - block
+  - LevelEnd
+  - Obstacle
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: OldLevel
+    uniqueID: 1084207867
+    locked: 0
+  - name: CurrentLevel
+    uniqueID: 3307317081
+    locked: 0
+  - name: NewLevel
+    uniqueID: 1768431341
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: GameArea
+    uniqueID: 2803612669
+    locked: 0
