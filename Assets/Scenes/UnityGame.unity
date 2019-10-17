@@ -747,11 +747,11 @@ MonoBehaviour:
   levelSizeY: 20
   LevelText: {fileID: 1069861584}
   levelPrefabs:
-  - {fileID: 2218695532920353233, guid: 07e98dd78535cb24cb30d700c5e95107, type: 3}
-  - {fileID: 2218695532920353233, guid: 07e98dd78535cb24cb30d700c5e95107, type: 3}
-  - {fileID: 2218695532920353233, guid: 07e98dd78535cb24cb30d700c5e95107, type: 3}
-  - {fileID: 2218695532920353233, guid: 07e98dd78535cb24cb30d700c5e95107, type: 3}
-  - {fileID: 2215818734711308803, guid: 299c6d30520c6ef468935ac923190e85, type: 3}
+  - {fileID: 7597246191959947146, guid: be6563feeebcefa4285fa119925fefd9, type: 3}
+  - {fileID: 7597246191959947146, guid: be6563feeebcefa4285fa119925fefd9, type: 3}
+  - {fileID: 7597246191959947146, guid: be6563feeebcefa4285fa119925fefd9, type: 3}
+  - {fileID: 7597246191959947146, guid: be6563feeebcefa4285fa119925fefd9, type: 3}
+  - {fileID: 7597246191959947146, guid: be6563feeebcefa4285fa119925fefd9, type: 3}
 --- !u!1 &808032127
 GameObject:
   m_ObjectHideFlags: 0
