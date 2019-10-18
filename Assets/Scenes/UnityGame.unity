@@ -184,6 +184,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 765577309}
   score: 0
+  ballon: {fileID: 425682608}
+  enemy_1: {fileID: 4605108757523070097, guid: 553662bf080fc1942b89e26df295bff6, type: 3}
+  enemy_2: {fileID: 3326743345049544448, guid: 35b1b9d15b95b9244a78dc851f26be0c, type: 3}
+  enemy_3: {fileID: 6216330149485368698, guid: fb3df40a9d936914999631e6487cd86e, type: 3}
+  enemy_4: {fileID: 2465752408094589700, guid: 1a5fa961e247aff4aaa0ffdfa6900912, type: 3}
+  enemy_5: {fileID: 5324381947002426660, guid: 5ec9ec5390c56dc42adb153b502c7f81, type: 3}
+  enemy_6: {fileID: 7596073290928803190, guid: 3a328faa0f329ab48841ba6d22978f9b, type: 3}
+  enemy_7: {fileID: 301386693575251209, guid: 5b2e7fbb7478a5445906c0afc4f61266, type: 3}
+  enemy_8: {fileID: 2865381391538692490, guid: 9a2ac356df5232e4391eac3bf0663db5, type: 3}
+  enemy_9: {fileID: 6656012374436357452, guid: dbb6a4131ed24f04bbc99204c8999576, type: 3}
+  enemy_10: {fileID: 916187987100821056, guid: d9acb1b090527a64881eb69553feebae, type: 3}
+  enemy_11: {fileID: 5988569753136703357, guid: e3f4b86e39139074fa989873b6064fa6,
+    type: 3}
+  enemy_12: {fileID: 9066039744699623803, guid: 2572d5899d5093549947453cde91b951,
+    type: 3}
+  enemy_13: {fileID: 2163249091081823458, guid: c1ed11e0e2a86c747954d5a2d6aef26f,
+    type: 3}
+  enemy_14: {fileID: 6827487422884743441, guid: 0e0f3b8a192947440b62fdb8c4e14590,
+    type: 3}
+  enemy_15: {fileID: 7132223475333658222, guid: 170d971f78d6b99448f9e1e50aa88de0,
+    type: 3}
 --- !u!50 &54135962
 Rigidbody2D:
   serializedVersion: 4
