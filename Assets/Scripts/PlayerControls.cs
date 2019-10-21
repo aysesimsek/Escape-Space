@@ -30,6 +30,7 @@ public class PlayerControls : MonoBehaviour
 
     void onMouseDrag()
     {
+
         Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
         Vector3 playerPosition = Camera.main.ScreenToWorldPoint(mousePosition);
         player.transform.position = playerPosition;
@@ -39,6 +40,7 @@ public class PlayerControls : MonoBehaviour
     {
         if(SceneManager.GetActiveScene().buildIndex == 0)
         {
+          
             score++;
             scoreText.text = (score).ToString();
         }

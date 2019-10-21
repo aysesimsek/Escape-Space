@@ -122,6 +122,7 @@ public class PlayerControl : MonoBehaviour {
 
     void Scorer()
     {
+    
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
             score++;

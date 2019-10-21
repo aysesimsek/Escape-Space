@@ -8,9 +8,16 @@ public class BackgroundMovement : MonoBehaviour
     [SerializeField]
     private Transform BackgroundCenter;
 
+
+    void Start()
+    {
+        SoundManager.PlaySound("background");
+    }
+
     // Update is called once per frame
     void Update()
     {
+        
         if (transform.position.y >= BackgroundCenter.position.y + 10f)
         {
             BackgroundCenter.position = new Vector2(BackgroundCenter.position.x, transform.position.y + 10f);
