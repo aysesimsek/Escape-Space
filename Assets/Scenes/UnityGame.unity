@@ -205,41 +205,67 @@ MonoBehaviour:
     type: 3}
   enemy_15: {fileID: 7132223475333658222, guid: 170d971f78d6b99448f9e1e50aa88de0,
     type: 3}
-  enemy_16: {fileID: 0}
-  enemy_17: {fileID: 0}
-  enemy_18: {fileID: 0}
-  enemy_19: {fileID: 0}
-  enemy_20: {fileID: 0}
-  enemy_21: {fileID: 0}
-  enemy_22: {fileID: 0}
-  enemy_23: {fileID: 0}
-  enemy_24: {fileID: 0}
-  enemy_25: {fileID: 0}
-  enemy_26: {fileID: 0}
-  enemy_27: {fileID: 0}
-  enemy_28: {fileID: 0}
-  enemy_29: {fileID: 0}
-  enemy_30: {fileID: 0}
-  enemy_31: {fileID: 0}
-  enemy_32: {fileID: 0}
-  enemy_33: {fileID: 0}
-  enemy_34: {fileID: 0}
-  enemy_35: {fileID: 0}
-  enemy_36: {fileID: 0}
-  enemy_37: {fileID: 0}
-  enemy_38: {fileID: 0}
-  enemy_39: {fileID: 0}
-  enemy_40: {fileID: 0}
-  enemy_41: {fileID: 0}
-  enemy_42: {fileID: 0}
-  enemy_43: {fileID: 0}
-  enemy_44: {fileID: 0}
-  enemy_45: {fileID: 0}
-  enemy_46: {fileID: 0}
-  enemy_47: {fileID: 0}
-  enemy_48: {fileID: 0}
-  enemy_49: {fileID: 0}
-  enemy_50: {fileID: 0}
+  enemy_16: {fileID: 7663650566308679340, guid: 905c784f9e6d34b4d9f65cb96482eaab,
+    type: 3}
+  enemy_17: {fileID: 2955065190970072255, guid: b3ea78f8aaf91f84e8b75fcda992f6ae,
+    type: 3}
+  enemy_18: {fileID: 4599432498535155953, guid: 662a1174a7e72a3499ef06aa9767fc6c,
+    type: 3}
+  enemy_19: {fileID: 106722431301725637, guid: 43a75b4a462fea143b3fb68a95688cce, type: 3}
+  enemy_20: {fileID: 429592293789826268, guid: 6bc707f6125ffeb4d9524b009ab71459, type: 3}
+  enemy_21: {fileID: 337523046770945024, guid: 960281c3c19bc9d429f5cd8a7feff907, type: 3}
+  enemy_22: {fileID: 2713513689341491119, guid: c6e51840be129cf46ab7c1288183ee9b,
+    type: 3}
+  enemy_23: {fileID: 5995670181075677959, guid: 33431ed0b8912c24eb9043ddd4f2c3ac,
+    type: 3}
+  enemy_24: {fileID: 6723185075529257067, guid: 01c0c7f3cb8bc514fbb8e32e86842a0b,
+    type: 3}
+  enemy_25: {fileID: 378464320938971725, guid: 8b83eed7f1d5c3a4f8e66453279bd5b8, type: 3}
+  enemy_26: {fileID: 6271830441531074788, guid: 35a153a03d595f642a67b6b05d01963f,
+    type: 3}
+  enemy_27: {fileID: 2364476671947071067, guid: 94543503147e42f448aad2f2d1655b2a,
+    type: 3}
+  enemy_28: {fileID: 6777214304074661909, guid: aba7192b8e1bae446b82a2ad7e307ac2,
+    type: 3}
+  enemy_29: {fileID: 7365828608507677429, guid: 7671e3434f7610d4e9137b3f8fc0c929,
+    type: 3}
+  enemy_30: {fileID: 3724382924000476604, guid: c8b93b367dcc73b459fd6e2ab84539a0,
+    type: 3}
+  enemy_31: {fileID: 299585641955385579, guid: 9ad03ab093bce4d4d9c591ef89a29395, type: 3}
+  enemy_32: {fileID: 6911082121484870999, guid: 577d0d51a2eebef49b8ddfdb82df407a,
+    type: 3}
+  enemy_33: {fileID: 5322997302879599474, guid: 408b21e930f0ea34b8c37498f1bb0312,
+    type: 3}
+  enemy_34: {fileID: 3519115426727378139, guid: 5cbba5734bfa4e748be22eb67bf22226,
+    type: 3}
+  enemy_35: {fileID: 6524006222360252852, guid: f24e3e74677c0354fb9611e5b77151f3,
+    type: 3}
+  enemy_36: {fileID: 3312485167541564708, guid: d02d878a9426f24488698b79e50a664d,
+    type: 3}
+  enemy_37: {fileID: 3140190875805160933, guid: c399662df4d2dfe44b47da3c98c8827e,
+    type: 3}
+  enemy_38: {fileID: 791542111831056333, guid: 741014dad795f6a408e057e27cf966b3, type: 3}
+  enemy_39: {fileID: 5238759530325266184, guid: bd2f025d6c228c54999a3ea1dea9d2ff,
+    type: 3}
+  enemy_40: {fileID: 6892781451107475366, guid: 6f4df37047d41ca49a347a25343d6b10,
+    type: 3}
+  enemy_41: {fileID: 8800029056569273082, guid: c005129173e1f174fa8603d57ebd37ab,
+    type: 3}
+  enemy_42: {fileID: 1032115551668723034, guid: 17b944d667640a74881bebe157948177,
+    type: 3}
+  enemy_43: {fileID: 302689275375158345, guid: 042acad8d87838c4189e4dc81aa13e88, type: 3}
+  enemy_44: {fileID: 6011045178635581417, guid: f40944372138e3b4b856e4d763d59c5e,
+    type: 3}
+  enemy_45: {fileID: 147641347269557511, guid: 9254774a98a58ec4c95fa3916544d114, type: 3}
+  enemy_46: {fileID: 1874295584120203273, guid: f01b5e433c9810e44ae89c2eb0eae57c,
+    type: 3}
+  enemy_47: {fileID: 4937265810450096466, guid: 2e87e063e8ff14847b395ade578b7951,
+    type: 3}
+  enemy_48: {fileID: 4344330639880349889, guid: 58842dc5aefd2db4a88d37a88ba801ad,
+    type: 3}
+  enemy_49: {fileID: 353146251662935000, guid: e924a47e20e35fb41a5dfef706d38c07, type: 3}
+  enemy_50: {fileID: 6794966005596237910, guid: d1071976b5eded04f90d3ee9ceb977d5,
+    type: 3}
 --- !u!50 &54135962
 Rigidbody2D:
   serializedVersion: 4
@@ -354,7 +380,7 @@ GameObject:
   - component: {fileID: 425682610}
   - component: {fileID: 425682612}
   m_Layer: 0
-  m_Name: balloon
+  m_Name: Spaceship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -369,7 +395,7 @@ Transform:
   m_GameObject: {fileID: 425682608}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -1.98, z: 10}
-  m_LocalScale: {x: 0.36931667, y: 0.31635666, z: 0.36931667}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 808032131}
   m_RootOrder: 0
@@ -461,7 +487,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 5cd284bf72344094097bb7efcd371c01, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 221faa5891af532448ca7efaeaa95ecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2241,7 +2267,7 @@ Transform:
   m_GameObject: {fileID: 1992768816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children:
   - {fileID: 1229025948}
   - {fileID: 1854263104}
