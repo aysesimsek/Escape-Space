@@ -6,16 +6,15 @@ using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour {
 
-	private Rigidbody2D rb;
+    #region variables
+    private Rigidbody2D rb;
 	private Vector2 mousePos;
 	private Vector2 offset;
 	private bool clicked;
-
     public Text scoreText;
     public float score = 0;
 
     public GameObject ballon;
-
     public GameObject enemy_1;
     public GameObject enemy_2;
     public GameObject enemy_3;
@@ -31,20 +30,44 @@ public class PlayerControl : MonoBehaviour {
     public GameObject enemy_13;
     public GameObject enemy_14;
     public GameObject enemy_15;
+    public GameObject enemy_16;
+    public GameObject enemy_17;
+    public GameObject enemy_18;
+    public GameObject enemy_19;
+    public GameObject enemy_20;
+    public GameObject enemy_21;
+    public GameObject enemy_22;
+    public GameObject enemy_23;
+    public GameObject enemy_24;
+    public GameObject enemy_25;
+    public GameObject enemy_26;
+    public GameObject enemy_27;
+    public GameObject enemy_28;
+    public GameObject enemy_29;
+    public GameObject enemy_30;
+    public GameObject enemy_31;
+    public GameObject enemy_32;
+    public GameObject enemy_33;
+    public GameObject enemy_34;
+    public GameObject enemy_35;
+    public GameObject enemy_36;
+    public GameObject enemy_37;
+    public GameObject enemy_38;
+    public GameObject enemy_39;
+    public GameObject enemy_40;
 
     GameObject[] enemyCollection;
 
-
-
     float next_time;
+    #endregion
 
-	private void Start () {
+    private void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		offset = transform.position;
         InvokeRepeating("Scorer", 0, 1);
         next_time = Time.time + 0.5f;
 
-     enemyCollection = new GameObject[] { enemy_1, enemy_2, enemy_3, enemy_4, enemy_5, enemy_6, enemy_7, enemy_8, enemy_9, enemy_10, enemy_11, enemy_12, enemy_13, enemy_14, enemy_15 };
+     enemyCollection = new GameObject[] { enemy_1, enemy_2, enemy_3, enemy_4, enemy_5, enemy_6, enemy_7, enemy_8, enemy_9, enemy_10, enemy_11, enemy_12, enemy_13, enemy_14, enemy_15, enemy_16, enemy_17, enemy_18, enemy_19, enemy_20, enemy_21, enemy_22, enemy_23, enemy_24, enemy_25, enemy_26, enemy_27, enemy_28, enemy_29, enemy_30, enemy_31, enemy_32, enemy_33, enemy_34, enemy_35, enemy_36, enemy_37, enemy_38, enemy_39, enemy_40 };
 
     //enemyCollection[0]=enemy_1;
 
@@ -75,7 +98,7 @@ public class PlayerControl : MonoBehaviour {
         //Debug.Log(Time.deltaTime % 10);
         if(Time.time > next_time)
         {
-            createEnemy();
+            CreateEnemy();
             next_time = next_time + 0.5f;
 
         }
@@ -97,19 +120,19 @@ public class PlayerControl : MonoBehaviour {
         }
     }
 
-    private void createEnemy()
+    private void CreateEnemy()
     {
 
         float random_x = Random.Range(-7.0F, 7.0F);
         float random_y = Random.Range(3.0F, 7.5F);
 
-        int enemy_no = Random.Range(0,15);
+        int enemy_no = Random.Range(0,30);
 
         GameObject currentEnemy = enemyCollection[enemy_no];
 
         GameObject new_enemy = Instantiate(currentEnemy, new Vector3(transform.position.x + random_x, transform.position.y + random_y, transform.position.z), Quaternion.identity);
 
-        Destroy(new_enemy, 15);
+        Destroy(new_enemy, 30);
     }
 
 }
