@@ -14,6 +14,10 @@ public class PlayerControl : MonoBehaviour {
     public Text scoreText;
     public float score = 0;
 
+    public GameObject planet_1;
+    public GameObject planet_2;
+    public GameObject planet_3;
+
     public GameObject ballon;
     public GameObject enemy_1;
     public GameObject enemy_2;
@@ -76,7 +80,7 @@ public class PlayerControl : MonoBehaviour {
         InvokeRepeating("Scorer", 0, 1);
         next_time = Time.time + 0.5f;
 
-     enemyCollection = new GameObject[] { enemy_1, enemy_2, enemy_3, enemy_4, enemy_5, enemy_6, enemy_7, enemy_8, enemy_9, enemy_10, enemy_11, enemy_12, enemy_13, enemy_14, enemy_15, enemy_16, enemy_17, enemy_18, enemy_19, enemy_20, enemy_21, enemy_22, enemy_23, enemy_24, enemy_25, enemy_26, enemy_27, enemy_28, enemy_29, enemy_30, enemy_31, enemy_32, enemy_33, enemy_34, enemy_35, enemy_36, enemy_37, enemy_38, enemy_39, enemy_40, enemy_41, enemy_42, enemy_43, enemy_44, enemy_45, enemy_46, enemy_47, enemy_48, enemy_49, enemy_50 };
+     enemyCollection = new GameObject[] { enemy_1, enemy_2, enemy_3, enemy_4, enemy_5, enemy_6, enemy_7, enemy_8, enemy_9, enemy_10, enemy_11, enemy_12, enemy_13, enemy_14, enemy_15, enemy_16, enemy_17, enemy_18, enemy_19, enemy_20, enemy_21, enemy_22, enemy_23, enemy_24, enemy_25, enemy_26, enemy_27, enemy_28, enemy_29, enemy_30, enemy_31, enemy_32, enemy_33, enemy_34, enemy_35, enemy_36, enemy_37, enemy_38, enemy_39, enemy_40, enemy_41, enemy_42, enemy_43, enemy_44, enemy_45, enemy_46, enemy_47, enemy_48, enemy_49, enemy_50, planet_1, planet_2, planet_3 };
 
     //enemyCollection[0]=enemy_1;
 
@@ -136,13 +140,13 @@ public class PlayerControl : MonoBehaviour {
         float random_x = Random.Range(-7.0F, 7.0F);
         float random_y = Random.Range(3.0F, 7.5F);
 
-        int enemy_no = Random.Range(0,50);
+        int enemy_no = Random.Range(0,53);
 
         GameObject currentEnemy = enemyCollection[enemy_no];
 
         GameObject new_enemy = Instantiate(currentEnemy, new Vector3(transform.position.x + random_x, transform.position.y + random_y, transform.position.z), Quaternion.identity);
 
-        Destroy(new_enemy, 50);
+        Destroy(new_enemy, 53);
     }
 
 }
