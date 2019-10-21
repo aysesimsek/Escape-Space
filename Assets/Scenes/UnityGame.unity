@@ -205,6 +205,41 @@ MonoBehaviour:
     type: 3}
   enemy_15: {fileID: 7132223475333658222, guid: 170d971f78d6b99448f9e1e50aa88de0,
     type: 3}
+  enemy_16: {fileID: 0}
+  enemy_17: {fileID: 0}
+  enemy_18: {fileID: 0}
+  enemy_19: {fileID: 0}
+  enemy_20: {fileID: 0}
+  enemy_21: {fileID: 0}
+  enemy_22: {fileID: 0}
+  enemy_23: {fileID: 0}
+  enemy_24: {fileID: 0}
+  enemy_25: {fileID: 0}
+  enemy_26: {fileID: 0}
+  enemy_27: {fileID: 0}
+  enemy_28: {fileID: 0}
+  enemy_29: {fileID: 0}
+  enemy_30: {fileID: 0}
+  enemy_31: {fileID: 0}
+  enemy_32: {fileID: 0}
+  enemy_33: {fileID: 0}
+  enemy_34: {fileID: 0}
+  enemy_35: {fileID: 0}
+  enemy_36: {fileID: 0}
+  enemy_37: {fileID: 0}
+  enemy_38: {fileID: 0}
+  enemy_39: {fileID: 0}
+  enemy_40: {fileID: 0}
+  enemy_41: {fileID: 0}
+  enemy_42: {fileID: 0}
+  enemy_43: {fileID: 0}
+  enemy_44: {fileID: 0}
+  enemy_45: {fileID: 0}
+  enemy_46: {fileID: 0}
+  enemy_47: {fileID: 0}
+  enemy_48: {fileID: 0}
+  enemy_49: {fileID: 0}
+  enemy_50: {fileID: 0}
 --- !u!50 &54135962
 Rigidbody2D:
   serializedVersion: 4
