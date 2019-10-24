@@ -17,7 +17,6 @@ public class BackgroundMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if (transform.position.y >= BackgroundCenter.position.y + 10f)
         {
             BackgroundCenter.position = new Vector2(BackgroundCenter.position.x, transform.position.y + 10f);

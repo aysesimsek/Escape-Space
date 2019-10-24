@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
     static public GameManager gm;
     public Vector4 cameraEdges;
-
-    public LevelsManager lm;
 
     private void Awake()
     {
@@ -20,8 +17,5 @@ public class GameManager : MonoBehaviour
             Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0, 0)).y,
             Camera.main.ViewportToWorldPoint(new Vector3(0, 0.5f, 0)).x
         );
-
-        lm = GetComponent<LevelsManager>();
     }
-
 }
