@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 54135965}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,11 +154,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 765577309}
   score: 0
-  planet_1: {fileID: 1198340361346675937, guid: bd3e629f3a378ab4ca4ef2b122ae6f68,
+  planet_1: {fileID: 35105152440768271, guid: fa4429218bea73c40b4004e086603b9c, type: 3}
+  planet_2: {fileID: 3562177003597918607, guid: add5adaed60231b4ca21c0be6ed47cab,
     type: 3}
-  planet_2: {fileID: 2336714228595879856, guid: 8346253dee2f30548b175cb3af35e789,
+  planet_3: {fileID: 4669716345929928016, guid: 4541cddf7c34b3b4f81dce697f378569,
     type: 3}
-  planet_3: {fileID: 15812036241980535, guid: 1eff1297da6d823438767c085249560e, type: 3}
   ballon: {fileID: 425682608}
   enemy_1: {fileID: 4605108757523070097, guid: 553662bf080fc1942b89e26df295bff6, type: 3}
   enemy_2: {fileID: 3326743345049544448, guid: 35b1b9d15b95b9244a78dc851f26be0c, type: 3}
@@ -888,7 +888,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: de8d3841e76ad5746b74b9c374cfc9e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1022,7 +1022,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraEdges: {x: 0, y: 0, z: 0, w: 0}
-  lm: {fileID: 0}
 --- !u!4 &766076312
 Transform:
   m_ObjectHideFlags: 0
@@ -1050,15 +1049,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2b783346dc247f4f952df52c5fcab41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLevel: 0
-  levelSizeY: 20
-  LevelText: {fileID: 1069861584}
-  levelPrefabs:
-  - {fileID: 2887579983552175434, guid: ac544fc158edd0b49b13ff5b937db90a, type: 3}
-  - {fileID: 2887579983552175434, guid: ac544fc158edd0b49b13ff5b937db90a, type: 3}
-  - {fileID: 2887579983552175434, guid: ac544fc158edd0b49b13ff5b937db90a, type: 3}
-  - {fileID: 2887579983552175434, guid: ac544fc158edd0b49b13ff5b937db90a, type: 3}
-  - {fileID: 2887579983552175434, guid: ac544fc158edd0b49b13ff5b937db90a, type: 3}
 --- !u!1 &808032127
 GameObject:
   m_ObjectHideFlags: 0

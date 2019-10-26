@@ -27,7 +27,6 @@ public class balloonControls : MonoBehaviour
         else if (collision.tag == "LevelEnd")
         {
             collision.tag = "Untagged";
-            GameManager.gm.lm.SpawnLevel();
         }
     }
     

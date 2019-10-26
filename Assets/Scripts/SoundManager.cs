@@ -34,6 +34,5 @@ public class SoundManager : MonoBehaviour
             default:
                 break;
         }
-
     }
 }
