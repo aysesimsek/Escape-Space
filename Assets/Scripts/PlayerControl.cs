@@ -138,7 +138,7 @@ public class PlayerControl : MonoBehaviour {
     {
 
         float random_x = Random.Range(-7.0F, 7.0F);
-        float random_y = Random.Range(3.0F, 7.5F);
+        float random_y = Random.Range(7.0F, 15.5F);
 
         int enemy_no = Random.Range(0,53);
 
