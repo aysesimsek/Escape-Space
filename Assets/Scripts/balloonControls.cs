@@ -62,7 +62,7 @@ public class balloonControls : MonoBehaviour
     private void RequestInterstitial()
 {
 #if UNITY_ANDROID
-        string adUnitId = "ca-app-pub-3940256099942544/1033173712";//"ca-app-pub-4802128076914608/7186158011"; //"ca-app-pub-3940256099942544/1033173712";
+        string adUnitId = "ca-app-pub-3940256099942544/1033173712";//gerçek "ca-app-pub-4802128076914608/7186158011"; //test "ca-app-pub-3940256099942544/1033173712";
     #elif UNITY_IPHONE
         string adUnitId = "ca-app-pub-3940256099942544/4411468910";
 #else
