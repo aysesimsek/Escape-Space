@@ -70,17 +70,30 @@ public class PlayerControl : MonoBehaviour {
     public GameObject enemy_49;
     public GameObject enemy_50;
     GameObject[] enemyCollection;
+    GameObject[] potionCollection;
 
-    float next_time;
+    public GameObject potion_1;
+    public Sprite ten_point;
+
+
+
+
+    float next_enemy_time;
+    float next_potion_time;
+
     #endregion
 
     private void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		offset = transform.position;
         InvokeRepeating("Scorer", 0, 1);
-        next_time = Time.time + 0.5f;
+        next_enemy_time = Time.time + 0.5f;
+        next_potion_time = Time.time + 1.0f;
 
-     enemyCollection = new GameObject[] { enemy_1, enemy_2, enemy_3, enemy_4, enemy_5, enemy_6, enemy_7, enemy_8, enemy_9, enemy_10, enemy_11, enemy_12, enemy_13, enemy_14, enemy_15, enemy_16, enemy_17, enemy_18, enemy_19, enemy_20, enemy_21, enemy_22, enemy_23, enemy_24, enemy_25, enemy_26, enemy_27, enemy_28, enemy_29, enemy_30, enemy_31, enemy_32, enemy_33, enemy_34, enemy_35, enemy_36, enemy_37, enemy_38, enemy_39, enemy_40, enemy_41, enemy_42, enemy_43, enemy_44, enemy_45, enemy_46, enemy_47, enemy_48, enemy_49, enemy_50, planet_1, planet_2, planet_3 };
+
+        enemyCollection = new GameObject[] { enemy_1, enemy_2, enemy_3, enemy_4, enemy_5, enemy_6, enemy_7, enemy_8, enemy_9, enemy_10, enemy_11, enemy_12, enemy_13, enemy_14, enemy_15, enemy_16, enemy_17, enemy_18, enemy_19, enemy_20, enemy_21, enemy_22, enemy_23, enemy_24, enemy_25, enemy_26, enemy_27, enemy_28, enemy_29, enemy_30, enemy_31, enemy_32, enemy_33, enemy_34, enemy_35, enemy_36, enemy_37, enemy_38, enemy_39, enemy_40, enemy_41, enemy_42, enemy_43, enemy_44, enemy_45, enemy_46, enemy_47, enemy_48, enemy_49, enemy_50, planet_1, planet_2, planet_3 };
+     potionCollection = new GameObject[] { potion_1};
+
     }
 
     private void FixedUpdate () {
@@ -106,11 +119,19 @@ public class PlayerControl : MonoBehaviour {
 			clicked = false;
 		}
         //Debug.Log(Time.deltaTime % 10);
-        if(Time.time > next_time)
+        if(Time.time > next_enemy_time)
         {
             CreateEnemy();
-            next_time = next_time + 0.5f;
+            next_enemy_time = next_enemy_time + 0.5f;
         }
+
+        if (Time.time > next_potion_time)
+        {
+            CreatePotion();
+            next_potion_time = next_potion_time + 1.0f;
+        }
+
+
 
         this.gameObject.transform.localScale = transform.localScale - new Vector3(Time.deltaTime/100000, Time.deltaTime / 100000, Time.deltaTime / 100000);
         ballon.transform.localScale = ballon.transform.localScale + new Vector3(Time.deltaTime / 100, Time.deltaTime / 100, Time.deltaTime / 100);
@@ -137,5 +158,34 @@ public class PlayerControl : MonoBehaviour {
         GameObject new_enemy = Instantiate(currentEnemy, new Vector3(transform.position.x + random_x, transform.position.y + random_y, transform.position.z), Quaternion.identity);
 
         Destroy(new_enemy, 53);
+    }
+
+    private void CreatePotion()
+    {
+        float random_x = Random.Range(-7.0F, 7.0F);
+        float random_y = Random.Range(7.0F, 15.5F);
+
+        int potion_no = Random.Range(0, 1);
+
+        GameObject currentEnemy = potionCollection[potion_no];
+
+        GameObject new_potion = Instantiate(currentEnemy, new Vector3(transform.position.x + random_x, transform.position.y + random_y, transform.position.z), Quaternion.identity);
+
+        Destroy(new_potion, 53);
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "oxygen")
+        {
+            Debug.Log("oxygen");
+             
+            collision.gameObject.GetComponent<SpriteRenderer>().sprite = ten_point;
+            Destroy(collision.gameObject,0.3f);
+            score = score + 10.0f;
+            scoreText.text = (score).ToString();
+
+        }
+     
     }
 }

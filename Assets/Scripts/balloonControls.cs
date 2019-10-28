@@ -9,6 +9,12 @@ public class balloonControls : MonoBehaviour
 {
     GameObject player;
     private InterstitialAd interstitial;
+    private Vector3 startPosition;
+    private Vector3 targetPosition;
+    private float t;
+    private float timeToReachTarget=3.0f;
+
+
 
     void Start()
     {
@@ -16,11 +22,23 @@ public class balloonControls : MonoBehaviour
         MobileAds.Initialize(initStatus => { });
         RequestInterstitial();
         player = GameObject.Find("Player");
+        // Invoke("SlideSpaceShipToBottom", 3);
+        startPosition = gameObject.transform.localPosition;
+        targetPosition = new Vector3(startPosition.x, startPosition.y -3.0f, startPosition.z);
     }
     void Update()
     {
+        t += Time.deltaTime / timeToReachTarget; // spaceship 3 sn sonra tabana hizalanmasını sağlıyor
+        gameObject.transform.localPosition = Vector3.MoveTowards(startPosition, targetPosition, t);
 
     }
+
+    private void SlideSpaceShipToBottom()
+    {
+        //  gameObject.transform.Translate(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y-3.0f, gameObject.transform.position.z));
+        gameObject.transform.localPosition= Vector3.MoveTowards(gameObject.transform.localPosition, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 300.0f, gameObject.transform.position.z),Time.deltaTime*100);
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Obstacle")
@@ -39,6 +57,7 @@ public class balloonControls : MonoBehaviour
             collision.tag = "Untagged";
         }
     }
+  
 
     private void RequestInterstitial()
 {
