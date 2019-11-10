@@ -228,15 +228,6 @@ public class PlayerControl : MonoBehaviour {
         new_fireset.transform.GetChild(5).GetComponent<Rigidbody2D>().velocity = new Vector2(0.4f, 1) * 30;
         new_fireset.transform.GetChild(6).GetComponent<Rigidbody2D>().velocity = new Vector2(0.6f, 1) * 30;
 
-
-
-
-
-
-
-
-
-
     }
 
     IEnumerator ThrowFire(GameObject new_fireset)
