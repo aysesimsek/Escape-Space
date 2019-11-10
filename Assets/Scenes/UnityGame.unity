@@ -244,6 +244,8 @@ MonoBehaviour:
   potion_1: {fileID: 7025125052563843602, guid: 66382df80bf21dd40b85192c2386939c,
     type: 3}
   gun: {fileID: 2413026487271984218, guid: c572a6d772d95eb418660b8afbf43ca4, type: 3}
+  gunVertical: {fileID: 2065273290732466060, guid: 7b16a920479aa3446af8fd1db6c54643,
+    type: 3}
   fireset1: {fileID: 8480418705161619207, guid: 92c617d9bcb6c944cb5eced95480ce45,
     type: 3}
   ten_point: {fileID: 21300000, guid: a22f7cef837277f4c8075a05b2f55271, type: 3}

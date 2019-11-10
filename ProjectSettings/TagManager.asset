@@ -10,6 +10,7 @@ TagManager:
   - background
   - oxygen
   - gun
+  - gunVertical
   layers:
   - Default
   - TransparentFX
