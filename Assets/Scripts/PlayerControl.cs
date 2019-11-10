@@ -73,6 +73,10 @@ public class PlayerControl : MonoBehaviour {
     GameObject[] potionCollection;
 
     public GameObject potion_1;
+    public GameObject gun;
+    public GameObject fireset1;
+
+
     public Sprite ten_point;
 
 
@@ -92,7 +96,7 @@ public class PlayerControl : MonoBehaviour {
 
 
         enemyCollection = new GameObject[] { enemy_1, enemy_2, enemy_3, enemy_4, enemy_5, enemy_6, enemy_7, enemy_8, enemy_9, enemy_10, enemy_11, enemy_12, enemy_13, enemy_14, enemy_15, enemy_16, enemy_17, enemy_18, enemy_19, enemy_20, enemy_21, enemy_22, enemy_23, enemy_24, enemy_25, enemy_26, enemy_27, enemy_28, enemy_29, enemy_30, enemy_31, enemy_32, enemy_33, enemy_34, enemy_35, enemy_36, enemy_37, enemy_38, enemy_39, enemy_40, enemy_41, enemy_42, enemy_43, enemy_44, enemy_45, enemy_46, enemy_47, enemy_48, enemy_49, enemy_50, planet_1, planet_2, planet_3 };
-     potionCollection = new GameObject[] { potion_1};
+     potionCollection = new GameObject[] { potion_1,gun};
 
     }
 
@@ -165,20 +169,19 @@ public class PlayerControl : MonoBehaviour {
         float random_x = Random.Range(-7.0F, 7.0F);
         float random_y = Random.Range(7.0F, 15.5F);
 
-        int potion_no = Random.Range(0, 1);
+        int potion_no = Random.Range(0, 2);
 
         GameObject currentEnemy = potionCollection[potion_no];
 
         GameObject new_potion = Instantiate(currentEnemy, new Vector3(transform.position.x + random_x, transform.position.y + random_y, transform.position.z), Quaternion.identity);
 
-        Destroy(new_potion, 53);
+        Destroy(new_potion, 100);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "oxygen")
         {
-            Debug.Log("oxygen");
              
             collision.gameObject.GetComponent<SpriteRenderer>().sprite = ten_point;
             Destroy(collision.gameObject,0.3f);
@@ -186,6 +189,81 @@ public class PlayerControl : MonoBehaviour {
             scoreText.text = (score).ToString();
 
         }
-     
+
+        if (collision.tag == "gun")
+        {
+            Debug.Log("gun");
+
+            Destroy(collision.gameObject);
+            CreateFireSet();
+
+
+        }
+
     }
+
+
+    private void CreateFireSet()
+    {
+        Debug.Log("CreateFireSet");
+
+        GameObject new_fireset = Instantiate(fireset1, ballon.transform.position, Quaternion.identity);
+
+        new_fireset.SetActive(true);
+
+
+
+        int childCount = new_fireset.transform.childCount;
+
+       
+
+        var angle = 1 / childCount;
+        //  StartCoroutine(ThrowFire(new_fireset));
+
+        new_fireset.transform.GetChild(0).GetComponent<Rigidbody2D>().velocity = new Vector2(-0.6f, 1)* 30;
+        new_fireset.transform.GetChild(1).GetComponent<Rigidbody2D>().velocity = new Vector2(-0.4f,1)* 30;
+        new_fireset.transform.GetChild(1).GetComponent<Rigidbody2D>().velocity = new Vector2(-0.2f, 1)* 30;
+        new_fireset.transform.GetChild(3).GetComponent<Rigidbody2D>().velocity = new Vector2(0,1)* 30;
+        new_fireset.transform.GetChild(4).GetComponent<Rigidbody2D>().velocity = new Vector2(0.2f,1)* 30;
+        new_fireset.transform.GetChild(5).GetComponent<Rigidbody2D>().velocity = new Vector2(0.4f, 1) * 30;
+        new_fireset.transform.GetChild(6).GetComponent<Rigidbody2D>().velocity = new Vector2(0.6f, 1) * 30;
+
+
+
+
+
+
+
+
+
+
+    }
+
+    IEnumerator ThrowFire(GameObject new_fireset)
+    {
+
+        if (new_fireset.scene.IsValid() && new_fireset != null)
+        {
+            for (int i = 0; new_fireset != null&& i < new_fireset.transform.childCount; i++)
+            {
+                if (new_fireset.scene.IsValid() && new_fireset != null)
+                {
+                    // new_fireset.transform.GetChild(i).GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1) * 30;
+                    Debug.Log(i);
+                    new_fireset.transform.GetChild(i).GetComponent<Rigidbody2D>().velocity = new Vector2(-0.2f +(i * 0.1f), 1) * 30;
+                    yield return new WaitForSeconds(0.0f);
+                }
+                else
+                {
+                   // Debug.Log("NOT EXIST");
+                }
+            }
+        }
+        else
+        {
+            Debug.Log("NOT EXIST");
+        }
+
+    }
+
 }

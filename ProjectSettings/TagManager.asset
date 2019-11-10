@@ -9,6 +9,7 @@ TagManager:
   - Obstacle
   - background
   - oxygen
+  - gun
   layers:
   - Default
   - TransparentFX
