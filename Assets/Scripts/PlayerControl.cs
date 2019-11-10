@@ -154,7 +154,7 @@ public class PlayerControl : MonoBehaviour {
 
     private void CreateEnemy()
     {
-        float random_x = Random.Range(-7.0F, 7.0F);
+        float random_x = Random.Range(-2.0F, 2.0F);
         float random_y = Random.Range(7.0F, 15.5F);
 
         int enemy_no = Random.Range(0,53);
@@ -198,6 +198,9 @@ public class PlayerControl : MonoBehaviour {
 
             Destroy(collision.gameObject);
             CreateFireSet();
+            Invoke("CreateFireSet", 0.2f);
+            Invoke("CreateFireSet", 0.4f);
+
         }
         if (collision.tag == "gunVertical")
         {
