@@ -11,6 +11,7 @@ TagManager:
   - oxygen
   - gun
   - gunVertical
+  - freezer
   layers:
   - Default
   - TransparentFX

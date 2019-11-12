@@ -76,7 +76,7 @@ public class PlayerControl : MonoBehaviour {
     public GameObject gun;
     public GameObject gunVertical;
     public GameObject fireset1;
-
+    public GameObject freezer;
 
 
     public Sprite ten_point;
@@ -98,7 +98,7 @@ public class PlayerControl : MonoBehaviour {
 
 
         enemyCollection = new GameObject[] { enemy_1, enemy_2, enemy_3, enemy_4, enemy_5, enemy_6, enemy_7, enemy_8, enemy_9, enemy_10, enemy_11, enemy_12, enemy_13, enemy_14, enemy_15, enemy_16, enemy_17, enemy_18, enemy_19, enemy_20, enemy_21, enemy_22, enemy_23, enemy_24, enemy_25, enemy_26, enemy_27, enemy_28, enemy_29, enemy_30, enemy_31, enemy_32, enemy_33, enemy_34, enemy_35, enemy_36, enemy_37, enemy_38, enemy_39, enemy_40, enemy_41, enemy_42, enemy_43, enemy_44, enemy_45, enemy_46, enemy_47, enemy_48, enemy_49, enemy_50, planet_1, planet_2, planet_3 };
-     potionCollection = new GameObject[] { potion_1,gun, gunVertical };
+     potionCollection = new GameObject[] { potion_1,gun, gunVertical, freezer };
 
     }
 
@@ -209,7 +209,13 @@ public class PlayerControl : MonoBehaviour {
             CreateFireSetVertical();
 
         }
+        if (collision.tag == "freezer")
+        {
+            Debug.Log("freezer");
+            Destroy(collision.gameObject);
+            Physics2D.gravity = Vector2.zero;
 
+        }
     }
 
 
@@ -238,6 +244,7 @@ public class PlayerControl : MonoBehaviour {
         new_fireset.SetActive(true);
         StartCoroutine(ThrowFire(new_fireset));
     }
+
 
     IEnumerator ThrowFire(GameObject new_fireset)
     {
