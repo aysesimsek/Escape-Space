@@ -248,6 +248,8 @@ MonoBehaviour:
     type: 3}
   fireset1: {fileID: 8480418705161619207, guid: 92c617d9bcb6c944cb5eced95480ce45,
     type: 3}
+  fireset2: {fileID: 3340974761134597008, guid: 3443538ad93c4cf42bda785a7210b3b5,
+    type: 3}
   freezer: {fileID: 8843743649991019698, guid: 00b12737f6b7b324fb43496b35a3897a, type: 3}
   ten_point: {fileID: 21300000, guid: a22f7cef837277f4c8075a05b2f55271, type: 3}
 --- !u!50 &54135962

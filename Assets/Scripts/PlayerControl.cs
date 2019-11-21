@@ -76,6 +76,7 @@ public class PlayerControl : MonoBehaviour {
     public GameObject gun;
     public GameObject gunVertical;
     public GameObject fireset1;
+    public GameObject fireset2;
     public GameObject freezer;
 
 
@@ -171,7 +172,7 @@ public class PlayerControl : MonoBehaviour {
         float random_x = Random.Range(-7.0F, 7.0F);
         float random_y = Random.Range(7.0F, 15.5F);
 
-        int potion_no = Random.Range(0, 3);
+        int potion_no = Random.Range(0, 4);
 
         GameObject currentEnemy = potionCollection[potion_no];
 
@@ -221,26 +222,30 @@ public class PlayerControl : MonoBehaviour {
 
     private void CreateFireSet()
     {
-        GameObject new_fireset = Instantiate(fireset1, ballon.transform.position, Quaternion.identity);
-        new_fireset.SetActive(true);
-        int childCount = new_fireset.transform.childCount;
-        var angle = 1 / childCount;
-        //  StartCoroutine(ThrowFire(new_fireset));
 
-        new_fireset.transform.GetChild(0).GetComponent<Rigidbody2D>().velocity = new Vector2(-0.6f, 1)* 30;
-        new_fireset.transform.GetChild(1).GetComponent<Rigidbody2D>().velocity = new Vector2(-0.4f,1)* 30;
-        new_fireset.transform.GetChild(1).GetComponent<Rigidbody2D>().velocity = new Vector2(-0.2f, 1)* 30;
-        new_fireset.transform.GetChild(3).GetComponent<Rigidbody2D>().velocity = new Vector2(0,1)* 30;
-        new_fireset.transform.GetChild(4).GetComponent<Rigidbody2D>().velocity = new Vector2(0.2f,1)* 30;
-        new_fireset.transform.GetChild(5).GetComponent<Rigidbody2D>().velocity = new Vector2(0.4f, 1) * 30;
-        new_fireset.transform.GetChild(6).GetComponent<Rigidbody2D>().velocity = new Vector2(0.6f, 1) * 30;
+        if ( fireset1 != null)
+        {
+            GameObject new_fireset = Instantiate(fireset1, ballon.transform.position, Quaternion.identity);
+            new_fireset.SetActive(true);
+            int childCount = new_fireset.transform.childCount;
+            var angle = 1 / childCount;
+            //  StartCoroutine(ThrowFire(new_fireset));
 
-        
+            new_fireset.transform.GetChild(0).GetComponent<Rigidbody2D>().velocity = new Vector2(-0.4f, 1) * 30;
+            new_fireset.transform.GetChild(1).GetComponent<Rigidbody2D>().velocity = new Vector2(-0.2f, 1) * 30;
+            new_fireset.transform.GetChild(2).GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1) * 30;
+            new_fireset.transform.GetChild(3).GetComponent<Rigidbody2D>().velocity = new Vector2(0.2f, 1) * 30;
+            new_fireset.transform.GetChild(4).GetComponent<Rigidbody2D>().velocity = new Vector2(0.4f, 1) * 30;
+
+        }
+
+
+
     }
 
     private void CreateFireSetVertical()
     {
-        GameObject new_fireset = Instantiate(fireset1, ballon.transform.position, Quaternion.identity);
+        GameObject new_fireset = Instantiate(fireset2, ballon.transform.position, Quaternion.identity);
         new_fireset.SetActive(true);
         StartCoroutine(ThrowFire(new_fireset));
     }
@@ -257,8 +262,8 @@ public class PlayerControl : MonoBehaviour {
                 {
                     // new_fireset.transform.GetChild(i).GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1) * 30;
                     Debug.Log(i);
-                    new_fireset.transform.GetChild(i).GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1) * 30;
-                    yield return new WaitForSeconds(0.25f);
+                    new_fireset.transform.GetChild(i).GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1) * 50;
+                    yield return new WaitForSeconds(0.30f);
                 }
                 else
                 {
