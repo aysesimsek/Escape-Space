@@ -69,8 +69,10 @@ public class PlayerControl : MonoBehaviour {
     public GameObject enemy_48;
     public GameObject enemy_49;
     public GameObject enemy_50;
+
     GameObject[] enemyCollection;
     GameObject[] potionCollection;
+    GameObject[] planetCollection;
 
     public GameObject potion_1;
     public GameObject gun;
@@ -79,15 +81,11 @@ public class PlayerControl : MonoBehaviour {
     public GameObject fireset2;
     public GameObject freezer;
 
-
     public Sprite ten_point;
-
-
-
 
     float next_enemy_time;
     float next_potion_time;
-
+    float next_planet_time;
     #endregion
 
     private void Start () {
@@ -96,10 +94,11 @@ public class PlayerControl : MonoBehaviour {
         InvokeRepeating("Scorer", 0, 1);
         next_enemy_time = Time.time + 0.5f;
         next_potion_time = Time.time + 1.0f;
+        next_planet_time = Time.time + 4.0f;
 
-
-        enemyCollection = new GameObject[] { enemy_1, enemy_2, enemy_3, enemy_4, enemy_5, enemy_6, enemy_7, enemy_8, enemy_9, enemy_10, enemy_11, enemy_12, enemy_13, enemy_14, enemy_15, enemy_16, enemy_17, enemy_18, enemy_19, enemy_20, enemy_21, enemy_22, enemy_23, enemy_24, enemy_25, enemy_26, enemy_27, enemy_28, enemy_29, enemy_30, enemy_31, enemy_32, enemy_33, enemy_34, enemy_35, enemy_36, enemy_37, enemy_38, enemy_39, enemy_40, enemy_41, enemy_42, enemy_43, enemy_44, enemy_45, enemy_46, enemy_47, enemy_48, enemy_49, enemy_50, planet_1, planet_2, planet_3 };
-     potionCollection = new GameObject[] { potion_1,gun, gunVertical, freezer };
+        enemyCollection = new GameObject[] { enemy_1, enemy_2, enemy_3, enemy_4, enemy_5, enemy_6, enemy_7, enemy_8, enemy_9, enemy_10, enemy_11, enemy_12, enemy_13, enemy_14, enemy_15, enemy_16, enemy_17, enemy_18, enemy_19, enemy_20, enemy_21, enemy_22, enemy_23, enemy_24, enemy_25, enemy_26, enemy_27, enemy_28, enemy_29, enemy_30, enemy_31, enemy_32, enemy_33, enemy_34, enemy_35, enemy_36, enemy_37, enemy_38, enemy_39, enemy_40, enemy_41, enemy_42, enemy_43, enemy_44, enemy_45, enemy_46, enemy_47, enemy_48, enemy_49, enemy_50};
+        planetCollection = new GameObject[] { planet_1, planet_2, planet_3 };
+        potionCollection = new GameObject[] { potion_1,gun, gunVertical, freezer };
 
     }
 
@@ -137,7 +136,11 @@ public class PlayerControl : MonoBehaviour {
             CreatePotion();
             next_potion_time = next_potion_time + 1.0f;
         }
-
+        if (Time.time > next_planet_time)
+        {
+            CreatePlanet();
+            next_planet_time = next_planet_time + 4.0f;
+        }
 
 
         this.gameObject.transform.localScale = transform.localScale - new Vector3(Time.deltaTime/100000, Time.deltaTime / 100000, Time.deltaTime / 100000);
@@ -158,15 +161,27 @@ public class PlayerControl : MonoBehaviour {
         float random_x = Random.Range(-2.0F, 2.0F);
         float random_y = Random.Range(7.0F, 15.5F);
 
-        int enemy_no = Random.Range(0,53);
+        int enemy_no = Random.Range(0,50);
 
         GameObject currentEnemy = enemyCollection[enemy_no];
 
         GameObject new_enemy = Instantiate(currentEnemy, new Vector3(transform.position.x + random_x, transform.position.y + random_y, transform.position.z), Quaternion.identity);
 
-        Destroy(new_enemy, 53);
+        Destroy(new_enemy, 50);
     }
+    private void CreatePlanet()
+    {
+        float random_x = Random.Range(-7.0F, 7.0F);
+        float random_y = Random.Range(7.0F, 15.5F);
 
+        int planet_no = Random.Range(0, 3);
+
+        GameObject currentPlanet = planetCollection[planet_no];
+
+        GameObject new_planet = Instantiate(currentPlanet, new Vector3(transform.position.x + random_x, transform.position.y + random_y, transform.position.z), Quaternion.identity);
+
+        Destroy(new_planet, 100);
+    }
     private void CreatePotion()
     {
         float random_x = Random.Range(-7.0F, 7.0F);
@@ -214,11 +229,26 @@ public class PlayerControl : MonoBehaviour {
         {
             Debug.Log("freezer");
             Destroy(collision.gameObject);
-            Physics2D.gravity = Vector2.zero;
-
+            //Physics2D.gravity = new Vector2(0, -9.8f);
+            StartCoroutine(Freezer());
         }
     }
 
+
+    IEnumerator Freezer()
+    {
+        foreach (GameObject enemy in enemyCollection)
+        {
+            enemy.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+            enemy.GetComponent<Rigidbody2D>().gravityScale = 0;
+        }
+        yield return new WaitForSeconds(30);
+        foreach (GameObject enemy in enemyCollection)
+        {
+            enemy.GetComponent<Rigidbody2D>().velocity = new Vector2(5, 5);
+            enemy.GetComponent<Rigidbody2D>().gravityScale = 0.05f;
+        }
+    }
 
     private void CreateFireSet()
     {
