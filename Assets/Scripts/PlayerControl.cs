@@ -100,6 +100,13 @@ public class PlayerControl : MonoBehaviour {
         planetCollection = new GameObject[] { planet_1, planet_2, planet_3 };
         potionCollection = new GameObject[] { potion_1,gun, gunVertical, freezer };
 
+        Debug.Log("Dusuyor");
+        foreach (GameObject enemy in enemyCollection)
+        {
+            enemy.GetComponent<Rigidbody2D>().velocity = new Vector2(5, 5);
+            enemy.GetComponent<Rigidbody2D>().gravityScale = 0.05f;
+        }
+
     }
 
     private void FixedUpdate () {
@@ -237,16 +244,18 @@ public class PlayerControl : MonoBehaviour {
 
     IEnumerator Freezer()
     {
+        Debug.Log("Duruyor");
         foreach (GameObject enemy in enemyCollection)
         {
             enemy.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
             enemy.GetComponent<Rigidbody2D>().gravityScale = 0;
         }
-        yield return new WaitForSeconds(30);
+        yield return new WaitForSeconds(15);
+        Debug.Log("Dusuyor");
         foreach (GameObject enemy in enemyCollection)
         {
             enemy.GetComponent<Rigidbody2D>().velocity = new Vector2(5, 5);
-            enemy.GetComponent<Rigidbody2D>().gravityScale = 0.05f;
+            enemy.GetComponent<Rigidbody2D>().gravityScale = 0.06f;
         }
     }
 
