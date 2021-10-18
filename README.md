@@ -1,6 +1,10 @@
 # Escape-Space
 An arcade game we developed for fun
 
+## Getting Started
+This game is available on Google Play.
+
+Click [here](https://play.google.com/store/apps/details?id=com.HacilarCo.ScapeEscape) to play Escape-Space. 
 
 
 |![unnamed1](https://user-images.githubusercontent.com/37701256/137760528-6d9dd986-16bf-488a-a79f-ea0acfbcb348.jpeg)|
